@@ -4,24 +4,22 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Deals
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
+  <ion-list class ="gameList">
+    <ion-searchbar [(ngModel)]="searchTerm" (ionBlur)="getTitles()"></ion-searchbar>
+  <ion-card *ngFor="let data of foundItems" routerLink="/detail/{{data.AppID}}/{{data.Plain}}" class="game">
+    <img [src]="getImage(data.AppID)" alt='image' onError="this.src='assets/gallery-512.png';">
+  <ion-card-header>
+    <ion-card-title>{{data.Name}}</ion-card-title>
+    </ion-card-header>
+      <ion-card-content>
+        Lowest Recorded Price:
+        <p>{{data.Overview.lowest != null ? data.Overview.lowest.price : 'No Price'}}</p>
+      </ion-card-content>
+    </ion-card>
   </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
 </ion-content>

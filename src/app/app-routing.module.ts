@@ -14,7 +14,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'detail/:ID/:Plain', loadChildren: './detail/detail.module#DetailPageModule' },
+  { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
+  { path: 'wishlist', loadChildren: './wishlist/wishlist.module#WishlistPageModule' }
 ];
 
 @NgModule({

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>wishlist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="CheckWishList($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  Last Checked:
+  {{lastChecked}}
+  <ion-list>
+  <ion-card *ngFor="let data of wishlist" routerLink="/detail/{{data.appid}}/{{data.plain}}" [ngClass]="{'priceFound': data.priceFound == true}">
+  <ion-card-header>
+    <ion-card-title>{{data.title}}</ion-card-title>
+    </ion-card-header>
+      <ion-card-content>
+        Desired Price:
+        <p>{{data.price != null ? data.price : 'No Price'}}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

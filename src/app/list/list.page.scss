@@ -1,1 +1,26 @@
+img {
+    width: 184px;
+    height: 69px;
+}
 
+.gameList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.game {
+    align-self: auto;
+    max-width: 40%;
+}
+
+.lowest {
+    background-color:  #34495e;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 5px;
+}

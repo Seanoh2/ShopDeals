@@ -1,0 +1,21 @@
+{
+    "meta" : {
+        "lastChecked" : ""
+    },
+    "data" : [{
+        "title" : "Devil May Cry V",
+        "plain" : "devilmaycryv",
+        "price" : 50.00,
+        "appid" : 601150,
+        "lowestFound" : 20.20,
+        "priceFound" : false
+    },
+    {
+        "title" : "Devil May Cry 4",
+        "plain" : "devilmaycryiv",
+        "price" : 50.00,
+        "appid" : 329050,
+        "lowestFound" : 20.12,
+        "priceFound" : true
+    }]
+}
