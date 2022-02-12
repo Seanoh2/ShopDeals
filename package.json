@@ -29,7 +29,7 @@
     "@ionic/angular": "^4.0.0",
     "@ionic/storage": "^2.2.0",
     "@types/cheerio": "^0.22.11",
-    "ajv": "^6.9.1",
+    "ajv": "^6.12.3",
     "cheerio": "^1.0.0-rc.2",
     "cordova-android": "7.1.4",
     "cordova-plugin-device": "^2.0.2",
